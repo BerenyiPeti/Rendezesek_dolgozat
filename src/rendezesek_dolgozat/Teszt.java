@@ -6,13 +6,15 @@ public class Teszt {
     }
 
     public boolean ellenoriz(int[] tomb) {
-        boolean rendezett = true;
-        for (int i = 0; i < tomb.length - 1; i++) {
-            if (tomb[i] > tomb[i + 1]) {
-                rendezett = false;
-            }
+        boolean rendezett = false;
+        int i = 0;
+        while (i < tomb.length - 1 && tomb[i] <= tomb[i + 1]) {
+            i++;
         }
 
+        if (i == tomb.length - 1) {
+            rendezett = true;
+        }
         return rendezett;
     }
 
